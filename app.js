@@ -37,7 +37,8 @@ let opts = {
     },
 }
 //代理转发请求配置启用
-app.use('/api', proxy('https://baidu.com/api', opts))
+app.use('/uatapi', proxy('https://baidu.com/uatapi', opts))
+app.use('/simapi', proxy('https://baidu.com/simapi', opts))
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
